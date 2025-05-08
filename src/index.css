@@ -1,0 +1,170 @@
+
+/* Fade-in animation for the header */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Zoom-in effect for background image */
+@keyframes zoomIn {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Add the animation to the header */
+.header-animation {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Button hover effect */
+.button-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Slide-in animation for navbar */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hover effect on navbar items */
+.navbar-item:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Sticky Navbar style */
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+  background-color: #c5c9f4;
+  height: 65px;
+}
+
+.sticky-navbar.scrolled {
+  background-color: #c5c9f4;
+}
+
+/* Navbar link text transition */
+.navbar-link {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.navbar-link:hover {
+  color: #111010;
+  transform: translateY(-2px);
+}
+
+/* Add fade-in animation delay */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate__fadeInUp {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.animate__fadeInDown {
+  animation: fadeInUp 1s ease-in-out reverse;
+}
+
+/* Hover effect for service cards */
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+/* Hover underline animation for service titles */
+.service-title {
+  position: relative;
+}
+
+.service-title::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ff6363;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.service-title:hover::after {
+  width: 100%;
+  left: 0;
+}
+/* Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate__fadeInUp {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Zoom-in effect for pricing cards */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate__zoomIn {
+  animation: zoomIn 0.6s ease-out;
+}
+
+/* Hover effect for the pricing cards */
+.pricing-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Styling for the features list */
+.pricing-card li {
+  padding-left: 20px;
+  position: relative;
+}
+
+.pricing-card li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff6363;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
